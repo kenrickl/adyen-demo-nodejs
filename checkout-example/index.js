@@ -66,7 +66,7 @@ app.post("/api/sessions", async (req, res) => {
       lineItems: [
         {quantity: 1, amountIncludingTax: 5000 , description: "Sunglasses"},
         {quantity: 1, amountIncludingTax: 5000 , description: "Headphones"}
-      ]
+      ] 
     });
 
     res.json(response);
@@ -188,7 +188,7 @@ app.post("/api/webhooks/notifications", async (req, res) => {
   // fetch first (and only) NotificationRequestItem
   const notification = notificationRequestItems[0].NotificationRequestItem
   console.log(notification)
-
+  
   // Handle the notification
   if( validator.validateHMAC(notification, hmacKey) ) {
     // valid hmac: process event
@@ -213,7 +213,7 @@ app.post("/api/webhooks/notifications", async (req, res) => {
 // process payload asynchronously
 function consumeEvent(notification) {
   // add item to DB, queue or different thread
-
+  
 }
 
 
