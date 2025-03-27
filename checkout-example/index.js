@@ -50,7 +50,7 @@ app.post("/api/sessions", async (req, res) => {
 
   try {
     // unique ref for the transaction
-    const orderRef = uuidv4();
+    const orderRef = uuid();
     // Allows for gitpod support
     const localhost = req.get('host');
     // const isHttps = req.connection.encrypted;
